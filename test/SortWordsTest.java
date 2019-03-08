@@ -1,0 +1,40 @@
+package com.stackroute;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class SortWordsTest {
+
+    SortWords obj;
+    @Before
+    public void setUp() throws Exception {
+         obj = new SortWords();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+<<<<<<< HEAD
+        obj = null;
+=======
+         obj = null;
+>>>>>>> 78710f80a6ce8c14ba29773c6fa39534369221b8
+    }
+
+    @Test
+    public void wordSort() {
+        String s1 = "ac b ccd sde tba zsw";
+        String arr1[] = s1.split(" ");
+        assertArrayEquals(arr1 ,obj.wordSort("b ac tba sde zsw ccd"));
+
+        String s2 = "happy he is so";
+        String arr2[] = s2.split(" ");
+        assertArrayEquals(arr2 ,obj.wordSort("he is so happy"));
+
+        String s3 = "a abhishek banka guy is lazy";
+        String arr3[] = s3.split(" ");
+        assertArrayEquals(arr3 ,obj.wordSort("abhishek banka is a lazy guy"));
+
+    }
+}
